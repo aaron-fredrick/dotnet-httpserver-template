@@ -15,8 +15,21 @@
         "language": "C#",
         "type": "project"
     },
-    "exclude": [
-        ".git/**", ".github/**", ".template.config/**", "artifacts/**", "bin/**", "obj/**"
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "exclude": [
+                ".git/**",
+                "bin/**",
+                "obj/**",
+                "*.nupkg",
+                ".vs/**",
+                ".idea/**",
+                ".github/**",
+                "artifacts/**"
+            ]
+        }
     ],
     "preferNameDirectory": true,
     "symbols": {
