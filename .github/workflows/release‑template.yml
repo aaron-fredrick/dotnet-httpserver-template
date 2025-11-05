@@ -31,7 +31,7 @@ jobs:
         run: |
           # Optional: get version from tag
           VERSION=${GITHUB_REF_NAME#v}   # strip leading 'v'
-          dotnet pack --configuration Release -o ./artifacts /p:PackageVersion=$VERSION
+          dotnet pack dotnet-httpserver-template.csproj -c Release -o ./artifacts /p:PackageVersion=$VERSION
 
           # Rename output to DotnetHttpServerTemplate.nupkg
           mv ./artifacts/*.nupkg ./artifacts/DotnetHttpServerTemplate.nupkg

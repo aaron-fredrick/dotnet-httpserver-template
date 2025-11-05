@@ -1,14 +1,16 @@
 /*
  * Template: Dotnet HTTP Server Template
- * Version: 1.0.0-alpha
+ * Version: 1.0.0-beta
  * Author  : Aaron Fredrick
  * File    : ApiController.cs
  */
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using System;
+using System.IO;
 
-namespace DotnetHttpServerTemplate.Controllers
+namespace $safeprojectname$.Controllers
 {
 	public static class ApiController
 	{

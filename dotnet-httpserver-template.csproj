@@ -7,10 +7,11 @@
     <RootNamespace>DotnetHttpServerTemplate</RootNamespace>
     <IsPackable>true</IsPackable>
     <PackageId>DotnetHttpServerTemplate</PackageId>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0-beta</Version>
     <Authors>Aaron Fredrick</Authors>
     <PackageDescription>Dotnet HTTP Server Template</PackageDescription>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <NoBuild>true</NoBuild>
   </PropertyGroup>
 
   <ItemGroup>

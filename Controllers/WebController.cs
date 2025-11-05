@@ -1,6 +1,6 @@
 /*
  * Template: Dotnet HTTP Server Template
- * Version: 1.0.0-alpha
+ * Version: 1.0.0-beta
  * Author  : Aaron Fredrick
  * File    : WebController.cs
  */
@@ -9,11 +9,14 @@
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using System.IO;
 using System.Reflection;
 using System.Dynamic;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using RazorLight;
 
-namespace DotnetHttpServerTemplate.Controllers
+namespace $safeprojectname$.Controllers
 {
 	public static class WebController
 	{
@@ -29,10 +32,7 @@ namespace DotnetHttpServerTemplate.Controllers
 		static WebController()
 		{
 			// Populate default properties from assembly
-			var assembly = Assembly.GetExecutingAssembly();
-			var infoVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "0.0.0";
-			var plusIndex = infoVersion.IndexOf('+');
-			_model.Version = infoVersion[..(plusIndex >= 0 ? plusIndex : infoVersion.Length)];
+			_model.Version = "1.0.0-beta";
 			_model.Author = "Aaron Fredrick"; // or read from assembly attribute
 		}
 

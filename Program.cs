@@ -1,11 +1,14 @@
 /*
  * Template: Dotnet HTTP Server Template
- * Version: 1.0.0-alpha
+ * Version: 1.0.0-beta
  * Author : Aaron Fredrick
  * File   : Program.cs
  */
 
-using DotnetHttpServerTemplate.Controllers;
+using $safeprojectname$.Controllers;
+using System.IO;
+using System;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Configuration;

@@ -10,7 +10,7 @@
     "identity": "AF.DotnetHttpServer.Template",
     "name": "Dotnet HTTP Server Template",
     "shortName": "af-httpserver",
-    "sourceName": "DotnetHttpServerTemplate",
+    "sourceName": "$safeprojectname$",
     "tags": {
         "language": "C#",
         "type": "project"
@@ -27,7 +27,9 @@
                 ".vs/**",
                 ".idea/**",
                 ".github/**",
-                "artifacts/**"
+                "artifacts/**",
+                "dotnet-httpserver-template.*",
+                ".template.config/**"
             ]
         }
     ],
@@ -35,7 +37,7 @@
     "symbols": {
         "templateVersion": {
             "type": "parameter",
-            "replaces": "1.0.0-alpha",
+            "replaces": "1.0.0-beta",
             "defaultValue": "1.0.0-beta"
         },
         "authorName": {
@@ -54,5 +56,25 @@
             "replaces": "MIT",
             "defaultValue": "MIT"
         }
-    }
+    },
+    "primaryOutputs": [
+        {
+            "path": "$safeprojectname$.csproj"
+        }
+    ],
+    "postActions": [
+        {
+            "description": "Restore NuGet packages required by this project.",
+            "manualInstructions": [
+                {
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "args": {
+                "targetDirectory": "."
+            },
+            "continueOnError": true
+        }
+    ]
 }
