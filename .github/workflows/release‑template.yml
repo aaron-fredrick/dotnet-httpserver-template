@@ -29,7 +29,12 @@ jobs:
       # Pack the template as NuGet package
       - name: Pack template
         run: |
-          dotnet pack --configuration Release -o ./artifacts
+          # Optional: get version from tag
+          VERSION=${GITHUB_REF_NAME#v}   # strip leading 'v'
+          dotnet pack --configuration Release -o ./artifacts /p:PackageVersion=$VERSION
+
+          # Rename output to DotnetHttpServerTemplate.nupkg
+          mv ./artifacts/*.nupkg ./artifacts/DotnetHttpServerTemplate.nupkg
           ls ./artifacts
 
       # Create GitHub Release and attach the .nupkg
@@ -38,4 +43,4 @@ jobs:
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          files: ./artifacts/*.nupkg
+          files: ./artifacts/DotnetHttpServerTemplate.nupkg
