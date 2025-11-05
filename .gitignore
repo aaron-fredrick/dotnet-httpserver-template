@@ -14,7 +14,6 @@ out/
 *.suo
 *.userosscache
 *.sln.docstates
-*.csproj*
 
 # JetBrains Rider
 .idea/
