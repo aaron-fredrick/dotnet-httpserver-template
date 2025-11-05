@@ -13,10 +13,12 @@
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <!-- Include all files in your template -->
-    <Content Include="**\*" Pack="true" PackagePath="content/" />
+    <Content Include="**/*"
+      Pack="true"
+      PackagePath="content/"
+      Exclude="bin/**;obj/**;.git/**;.github/**;artifacts/**;*.nupkg" />
   </ItemGroup>
+
 
 </Project>
