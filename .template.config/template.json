@@ -6,7 +6,7 @@
         ".NET",
         "Server"
     ],
-    "defaultName" : "HttpServer",
+    "defaultName": "HttpServer",
     "identity": "AF.DotnetHttpServer.Template",
     "name": "Dotnet HTTP Server Template",
     "shortName": "af-httpserver",
@@ -15,6 +15,9 @@
         "language": "C#",
         "type": "project"
     },
+    "exclude": [
+        ".git/**"
+    ],
     "preferNameDirectory": true,
     "symbols": {
         "templateVersion": {
