@@ -1,0 +1,35 @@
+# .github/workflows/release-template.yml
+
+name: Release Dotnet HTTP Server Template
+
+on:
+  push:
+    tags:
+      - 'v*'       # trigger on any tag starting with "v"
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow creating releases
+
+    steps:
+      # Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # ensures tags are available
+
+      # Create ZIP of the template
+      - name: Zip the template
+        run: |
+          echo "Creating template.zip"
+          zip -r template.zip . -x ".git/*" -x ".github/*"
+
+      # Create GitHub Release and attach template.zip
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          files: template.zip

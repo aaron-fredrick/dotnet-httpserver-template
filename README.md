@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-dotnet new install https://github.com/aaron-fredrick/dotnet-httpserver-template
+dotnet new install https://github.com/aaron-fredrick/dotnet-httpserver-template/releases/latest/download/template.zip
 ```
 
 ## Usage
