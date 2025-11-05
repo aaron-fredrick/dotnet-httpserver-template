@@ -20,7 +20,7 @@
         "templateVersion": {
             "type": "parameter",
             "replaces": "1.0.0-alpha",
-            "defaultValue": "1.0.0-alpha"
+            "defaultValue": "1.0.0-beta"
         },
         "authorName": {
             "type": "parameter",
