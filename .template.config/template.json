@@ -16,7 +16,7 @@
         "type": "project"
     },
     "exclude": [
-        ".git/**"
+        ".git/**", ".github/**", ".template.config/**", "artifacts/**", "bin/**", "obj/**"
     ],
     "preferNameDirectory": true,
     "symbols": {
