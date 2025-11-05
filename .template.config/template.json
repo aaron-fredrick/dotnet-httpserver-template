@@ -10,6 +10,10 @@
     "name": "Dotnet HTTP Server Template",
     "shortName": "af-httpserver",
     "sourceName": "DotnetHttpServerTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
     "preferNameDirectory": true,
     "symbols": {
         "templateVersion": {
