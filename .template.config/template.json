@@ -19,8 +19,8 @@
     "symbols": {
         "templateVersion": {
             "type": "parameter",
-            "replaces": "1.0.0",
-            "defaultValue": "1.0.0"
+            "replaces": "1.0.0-alpha",
+            "defaultValue": "1.0.0-alpha"
         },
         "authorName": {
             "type": "parameter",

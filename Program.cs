@@ -1,6 +1,6 @@
 /*
  * Template: Dotnet HTTP Server Template
- * Version: 1.0.0
+ * Version: 1.0.0-alpha
  * Author : Aaron Fredrick
  * File   : Program.cs
  */
