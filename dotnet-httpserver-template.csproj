@@ -10,6 +10,13 @@
     <Version>1.0.0</Version>
     <Authors>Aaron Fredrick</Authors>
     <PackageDescription>Dotnet HTTP Server Template</PackageDescription>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
+
+
+  <ItemGroup>
+    <!-- Include all files in your template -->
+    <Content Include="**\*" Pack="true" PackagePath="content/" />
+  </ItemGroup>
 
 </Project>
