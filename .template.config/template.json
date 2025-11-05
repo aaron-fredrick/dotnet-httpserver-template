@@ -6,6 +6,7 @@
         ".NET",
         "Server"
     ],
+    "defaultName" : "HttpServer",
     "identity": "AF.DotnetHttpServer.Template",
     "name": "Dotnet HTTP Server Template",
     "shortName": "af-httpserver",

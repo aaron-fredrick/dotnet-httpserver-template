@@ -20,16 +20,22 @@ jobs:
         with:
           fetch-depth: 0    # ensures tags are available
 
-      # Create ZIP of the template
-      - name: Zip the template
-        run: |
-          echo "Creating template.zip"
-          zip -r template.zip . -x ".git/*" -x ".github/*"
+      # Setup .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'  # or the version you target
 
-      # Create GitHub Release and attach template.zip
+      # Pack the template as NuGet package
+      - name: Pack template
+        run: |
+          dotnet pack --configuration Release -o ./artifacts
+          ls ./artifacts
+
+      # Create GitHub Release and attach the .nupkg
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
-          files: template.zip
+          files: ./artifacts/*.nupkg
